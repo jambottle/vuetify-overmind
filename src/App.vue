@@ -1,43 +1,17 @@
 <template>
   <v-app>
     <v-app-bar app color="primary" dark>
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
+      <v-app-bar-nav-icon @click="drawer = !drawer" />
+      <v-spacer />
     </v-app-bar>
 
-    <v-navigation-drawer app>
+    <v-navigation-drawer app v-model="drawer">
       <v-list-item>
         <v-list-item-content>
-          <v-list-item-title class="text-h6"> Application </v-list-item-title>
-          <v-list-item-subtitle> subtext </v-list-item-subtitle>
+          <v-list-item-title class="text-h6">
+            Project Overmind
+          </v-list-item-title>
+          <v-list-item-subtitle>Medistream Admin Page</v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
 
@@ -57,7 +31,9 @@
     </v-navigation-drawer>
 
     <v-main>
-      <router-view />
+      <v-container fluid>
+        <router-view />
+      </v-container>
     </v-main>
   </v-app>
 </template>
@@ -68,12 +44,18 @@ export default {
 
   data() {
     return {
+      drawer: false,
       items: [
         { title: 'Dashboard', icon: 'mdi-view-dashboard', to: '/' },
         {
           title: 'Grid System',
-          icon: 'mdi-view-dashboard',
+          icon: 'mdi-image',
           to: '/grid-system',
+        },
+        {
+          title: 'Grid List Page',
+          icon: 'mdi-image',
+          to: '/grid-list-page',
         },
       ],
       right: null,
