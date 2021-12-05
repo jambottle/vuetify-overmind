@@ -1,0 +1,32 @@
+$font-size-root: 14px;
+
+$headings: (
+  'h1': (
+    'size': 3.3125rem,
+    'line-height': 1.15em,
+    'weight': 300,
+  ),
+  'h2': (
+    'size': 2.25rem,
+    'line-height': 1.5em,
+    'weight': 300,
+  ),
+  'h3': (
+    'size': 1.5625rem,
+    'line-height': 1.4em,
+    'weight': 300,
+  ),
+  'h4': (
+    'size': 1.125rem,
+    'line-height': 1.4em,
+    'weight': 300,
+  ),
+);
+
+$btn-sizes: (
+  'x-small': 15,
+  'small': 23,
+  'default': 31,
+  'large': 39,
+  'x-large': 47,
+);

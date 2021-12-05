@@ -54,6 +54,8 @@
 </template>
 
 <script>
+import '@/styles/overrides.scss';
+
 export default {
   name: 'App',
 

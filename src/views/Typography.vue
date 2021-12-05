@@ -17,7 +17,7 @@
 
       <v-container class="grey lighten-3">
         <v-card class="pa-3 d-none d-sm-block" outlined>
-          <p class="text-h1">Heading 1</p>
+          <p class="text-h1 pa-17">Heading 1</p>
           <p class="text-h2">Heading 2</p>
           <p class="text-h3 text-sm-subtitle-1">Heading 3</p>
           <!-- <p class="display-4">Display 4</p> -->
