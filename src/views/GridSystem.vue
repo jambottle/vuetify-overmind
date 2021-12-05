@@ -35,6 +35,7 @@
         </v-col>
       </v-row>
     </v-card>
+
     <v-card class="mt-5 pa-3">
       <v-row>
         <v-col>
@@ -61,6 +62,7 @@
         </v-col>
       </v-row>
     </v-card>
+
     <v-card class="mt-5 pa-3">
       <v-row :style="{ height: '120px' }" class="red" align="center">
         <v-col>
@@ -85,6 +87,7 @@
         </v-col>
       </v-row>
     </v-card>
+
     <v-card class="mt-5 pa-3">
       <v-row justify="start">
         <v-col cols="auto">

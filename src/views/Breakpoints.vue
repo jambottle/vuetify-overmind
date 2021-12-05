@@ -14,7 +14,6 @@
         $vuetify.breakpoint.mobile: {{ $vuetify.breakpoint.mobile }}
         {{ $vuetify.breakpoint.mobileBreakpoint }}
       </v-card-title>
-
       <v-container class="grey lighten-3">
         <v-dialog
           v-model="dialog"
@@ -26,7 +25,6 @@
               Click Me
             </v-btn>
           </template>
-
           <v-card>
             <v-card-title class="text-h5 grey lighten-2">
               Privacy Policy
@@ -40,9 +38,7 @@
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </v-card-text>
-
             <v-divider />
-
             <v-card-actions>
               <v-spacer />
               <v-btn color="primary" text @click="dialog = false">

@@ -4,16 +4,18 @@ import colors from 'vuetify/lib/util/colors';
 
 Vue.use(Vuetify);
 
+const theme = {
+  primary: colors.deepOrange,
+};
+
 export default new Vuetify({
   breakpoint: {
     mobileBreakpoint: 'xs',
   },
   theme: {
     themes: {
-      light: {
-        primary: colors.yellow,
-        secondary: '#9c27b0',
-      },
+      light: theme,
+      dark: theme,
     },
   },
 });
