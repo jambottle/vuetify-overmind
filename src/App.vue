@@ -15,14 +15,13 @@
         </v-list-item-content>
       </v-list-item>
 
-      <v-divider></v-divider>
+      <v-divider />
 
       <v-list dense nav>
         <v-list-item v-for="item in items" :key="item.title" link :to="item.to">
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-icon>
-
           <v-list-item-content>
             <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item-content>
@@ -56,6 +55,11 @@ export default {
           title: 'Grid List Page',
           icon: 'mdi-image',
           to: '/grid-list-page',
+        },
+        {
+          title: 'Breakpoints',
+          icon: 'mdi-image',
+          to: '/breakpoints',
         },
       ],
       right: null,
