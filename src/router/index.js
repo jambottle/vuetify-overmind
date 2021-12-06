@@ -86,16 +86,16 @@ const routes = [
     component: AuthLayout,
     children: [
       {
-        path: 'signup',
-        name: 'SignUp',
-        component: () =>
-          import(/* webpackChunkName: "views-auth" */ '@/views/auth/SignUp'),
-      },
-      {
         path: 'signin',
         name: 'SignIn',
         component: () =>
           import(/* webpackChunkName: "views-auth" */ '@/views/auth/SignIn'),
+      },
+      {
+        path: 'signup',
+        name: 'SignUp',
+        component: () =>
+          import(/* webpackChunkName: "views-auth" */ '@/views/auth/SignUp'),
       },
     ],
   },

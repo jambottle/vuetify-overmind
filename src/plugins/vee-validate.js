@@ -2,6 +2,7 @@ import Vue from 'vue';
 
 /* (1) max 규칙을 직접 만들어 활용하는 방법 */
 import { extend, ValidationObserver, ValidationProvider } from 'vee-validate';
+
 // extend('max', (value, params) => {
 //   const limit = params[0];
 //   if (value && value.length > limit) {
@@ -11,7 +12,15 @@ import { extend, ValidationObserver, ValidationProvider } from 'vee-validate';
 // });
 
 /* (2) max 규칙 등을 불러와 활용/응용하는 방법 */
-import { max, required, numeric, digits, email } from 'vee-validate/dist/rules';
+import {
+  max,
+  required,
+  numeric,
+  digits,
+  email,
+  confirmed,
+} from 'vee-validate/dist/rules';
+
 extend('max', {
   ...max,
   message: '{_field_} 필드는 {length}자를 초과할 수 없습니다.',
@@ -31,6 +40,10 @@ extend('digits', {
 extend('email', {
   ...email,
   message: '잘못 입력된 이메일 주소입니다.',
+});
+extend('confirmed', {
+  ...confirmed,
+  message: '비밀번호와 비밀번호 확인이 일치하지 않습니다.',
 });
 
 Vue.component('ValidationObserver', ValidationObserver);

@@ -46,8 +46,8 @@ export default {
               title: 'Authentication',
               icon: 'mdi-key',
               items: [
-                { title: 'Sign Up', icon: 'mdi-login', to: '/auth/signup' },
-                { title: 'Sign In', icon: 'mdi-logout', to: '/auth/signin' },
+                { title: 'Sign In', icon: 'mdi-login', to: '/auth/signin' },
+                { title: 'Sign Up', icon: 'mdi-logout', to: '/auth/signup' },
               ],
             },
             {
