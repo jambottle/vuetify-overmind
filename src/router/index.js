@@ -6,8 +6,8 @@ import AuthLayout from '@/layouts/auth/Index';
 import PageLayout from '@/layouts/page/Index';
 
 import Dashboard from '@/views/Dashboard';
-import SignUp from '@/views/auth/SignUp';
-import SignIn from '@/views/auth/SignIn';
+// import SignUp from '@/views/auth/SignUp';
+// import SignIn from '@/views/auth/SignIn';
 import ProductList from '@/views/page/ProductList';
 
 import GridSystem from '@/views/GridSystem';
@@ -19,6 +19,8 @@ import Tables from '@/views/Tables';
 import Forms from '@/views/Forms';
 import Buttons from '@/views/Buttons';
 import Icons from '@/views/Icons';
+
+// import Test from '@/views/Test';
 
 Vue.use(VueRouter);
 
@@ -72,6 +74,11 @@ const routes = [
         name: 'Icons',
         component: Icons,
       },
+      {
+        path: '/test',
+        name: 'Test',
+        component: () => import('@/views/Test'),
+      },
     ],
   },
   {
@@ -81,12 +88,14 @@ const routes = [
       {
         path: 'signup',
         name: 'SignUp',
-        component: SignUp,
+        component: () =>
+          import(/* webpackChunkName: "views-auth" */ '@/views/auth/SignUp'),
       },
       {
         path: 'signin',
         name: 'SignIn',
-        component: SignIn,
+        component: () =>
+          import(/* webpackChunkName: "views-auth" */ '@/views/auth/SignIn'),
       },
     ],
   },
