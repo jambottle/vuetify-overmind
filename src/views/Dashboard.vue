@@ -21,11 +21,14 @@
                 <strong v-if="avg">BPM</strong>
               </div>
             </v-row>
+
             <v-spacer />
+
             <v-btn icon class="align-self-start" size="28">
               <v-icon>mdi-arrow-right-thick</v-icon>
             </v-btn>
           </v-card-title>
+
           <v-sheet color="transparent">
             <v-sparkline
               :key="String(avg)"
@@ -56,10 +59,13 @@
               </v-sparkline>
             </v-sheet>
           </v-card-text>
+
           <v-card-text>
             <div class="text-h4 font-weight-thin">Sales Last 24h</div>
           </v-card-text>
+
           <v-divider />
+
           <v-card-actions class="justify-center">
             <v-btn block text>Go to Report</v-btn>
           </v-card-actions>

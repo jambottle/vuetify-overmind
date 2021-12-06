@@ -7,15 +7,7 @@
 
 <script>
 export default {
-  name: 'DefaultAppBar',
-
-  data() {
-    return {};
-  },
-
-  mounted() {},
-
-  methods: {},
+  name: 'AppBar',
 };
 </script>
 

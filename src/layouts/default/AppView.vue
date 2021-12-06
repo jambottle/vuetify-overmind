@@ -8,15 +8,7 @@
 
 <script>
 export default {
-  name: 'DefaultAppView',
-
-  data() {
-    return {};
-  },
-
-  mounted() {},
-
-  methods: {},
+  name: 'AppView',
 };
 </script>
 

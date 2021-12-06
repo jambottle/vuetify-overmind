@@ -1,29 +1,21 @@
 <template>
   <v-app>
-    <PageAppBar />
-    <PageAppView />
+    <PageBar />
+    <PageView />
   </v-app>
 </template>
 
 <script>
-import PageAppBar from './AppBar.vue';
-import PageAppView from './AppView.vue';
+import PageBar from './PageBar.vue';
+import PageView from './PageView.vue';
 
 export default {
   name: 'PageLayout',
 
   components: {
-    PageAppBar,
-    PageAppView,
+    PageBar,
+    PageView,
   },
-
-  data() {
-    return {};
-  },
-
-  mounted() {},
-
-  methods: {},
 };
 </script>
 

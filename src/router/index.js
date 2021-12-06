@@ -1,11 +1,15 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-import DefaultLayout from '@/layouts/default/Index';
-import PageLayout from '@/layouts/page/Index';
+import AppLayout from '@/layouts/default/Index';
 import AuthLayout from '@/layouts/auth/Index';
+import PageLayout from '@/layouts/page/Index';
 
 import Dashboard from '@/views/Dashboard';
+import SignUp from '@/views/auth/SignUp';
+import SignIn from '@/views/auth/SignIn';
+import ProductList from '@/views/page/ProductList';
+
 import GridSystem from '@/views/GridSystem';
 import GridListPage from '@/views/GridListPage';
 import Breakpoints from '@/views/Breakpoints';
@@ -16,16 +20,12 @@ import Forms from '@/views/Forms';
 import Buttons from '@/views/Buttons';
 import Icons from '@/views/Icons';
 
-import SignIn from '@/views/auth/SignIn';
-import SignUp from '@/views/auth/SignUp';
-import ProductList from '@/views/page/ProductList';
-
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
-    component: DefaultLayout,
+    component: AppLayout,
     children: [
       {
         path: '/',
@@ -79,14 +79,14 @@ const routes = [
     component: AuthLayout,
     children: [
       {
-        path: 'signin',
-        name: 'SignIn',
-        component: SignIn,
-      },
-      {
         path: 'signup',
         name: 'SignUp',
         component: SignUp,
+      },
+      {
+        path: 'signin',
+        name: 'SignIn',
+        component: SignIn,
       },
     ],
   },

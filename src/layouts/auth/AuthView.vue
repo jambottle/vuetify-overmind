@@ -6,15 +6,7 @@
 
 <script>
 export default {
-  name: 'AuthAppView',
-
-  data() {
-    return {};
-  },
-
-  mounted() {},
-
-  methods: {},
+  name: 'AuthView',
 };
 </script>
 

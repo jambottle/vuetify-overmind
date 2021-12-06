@@ -1,26 +1,18 @@
 <template>
   <v-app>
-    <AuthAppView />
+    <AuthView />
   </v-app>
 </template>
 
 <script>
-import AuthAppView from './AppView.vue';
+import AuthView from './AuthView.vue';
 
 export default {
   name: 'AuthLayout',
 
   components: {
-    AuthAppView,
+    AuthView,
   },
-
-  data() {
-    return {};
-  },
-
-  mounted() {},
-
-  methods: {},
 };
 </script>
 

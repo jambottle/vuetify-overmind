@@ -9,13 +9,5 @@ import '@/styles/overrides.scss';
 
 export default {
   name: 'App',
-
-  data() {
-    return {};
-  },
-
-  mounted() {},
-
-  methods: {},
 };
 </script>

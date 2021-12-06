@@ -12,14 +12,14 @@
               prepend-icon="mdi-email"
             />
             <v-text-field
-              v-model="password"
+              v-model="password1"
               label="Password"
               clearable
               prepend-icon="mdi-lock-outline"
             />
-            <v-btn class="mt-4" block x-large rounded color="primary"
-              >Sign In</v-btn
-            >
+            <v-btn class="mt-4" block x-large rounded color="primary">
+              Sign In
+            </v-btn>
           </v-card-text>
         </v-card>
       </v-col>
@@ -30,14 +30,6 @@
 <script>
 export default {
   name: 'SignIn',
-
-  data() {
-    return {};
-  },
-
-  mounted() {},
-
-  methods: {},
 };
 </script>
 

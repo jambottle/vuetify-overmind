@@ -22,14 +22,6 @@
 <script>
 export default {
   name: 'Buttons',
-
-  data() {
-    return {};
-  },
-
-  mounted() {},
-
-  methods: {},
 };
 </script>
 

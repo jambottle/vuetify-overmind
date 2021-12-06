@@ -1,23 +1,23 @@
 <template>
   <v-app>
-    <DefaultAppBar @drawer="drawer = !drawer" />
-    <DefaultAppDrawer v-model="drawer" />
-    <DefaultAppView />
+    <AppBar @drawer="drawer = !drawer" />
+    <AppDrawer v-model="drawer" />
+    <AppView />
   </v-app>
 </template>
 
 <script>
-import DefaultAppBar from './AppBar.vue';
-import DefaultAppDrawer from './AppDrawer.vue';
-import DefaultAppView from './AppView.vue';
+import AppBar from './AppBar.vue';
+import AppDrawer from './AppDrawer.vue';
+import AppView from './AppView.vue';
 
 export default {
-  name: 'DefaultLayout',
+  name: 'AppLayout',
 
   components: {
-    DefaultAppBar,
-    DefaultAppDrawer,
-    DefaultAppView,
+    AppBar,
+    AppDrawer,
+    AppView,
   },
 
   data() {
@@ -25,10 +25,6 @@ export default {
       drawer: false,
     };
   },
-
-  mounted() {},
-
-  methods: {},
 };
 </script>
 

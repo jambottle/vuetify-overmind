@@ -11,14 +11,6 @@
 <script>
 export default {
   name: 'GridListPage',
-
-  data() {
-    return {};
-  },
-
-  mounted() {},
-
-  methods: {},
 };
 </script>
 

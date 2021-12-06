@@ -6,15 +6,7 @@
 
 <script>
 export default {
-  name: 'PageAppBar',
-
-  data() {
-    return {};
-  },
-
-  mounted() {},
-
-  methods: {},
+  name: 'PageBar',
 };
 </script>
 

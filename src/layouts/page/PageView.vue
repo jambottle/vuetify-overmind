@@ -8,15 +8,7 @@
 
 <script>
 export default {
-  name: 'PageAppView',
-
-  data() {
-    return {};
-  },
-
-  mounted() {},
-
-  methods: {},
+  name: 'PageView',
 };
 </script>
 

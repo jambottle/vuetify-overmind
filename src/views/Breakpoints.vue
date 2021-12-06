@@ -2,7 +2,8 @@
   <v-container>
     <v-card>
       <v-card-title>
-        $vuetify.breakpoint.name: {{ $vuetify.breakpoint.name }}
+        $vuetify.breakpoint.name:
+        {{ $vuetify.breakpoint.name }}
       </v-card-title>
       <v-container class="grey lighten-3">
         <v-card class="pa-3" outlined :height="height">Content</v-card>
@@ -11,7 +12,8 @@
 
     <v-card class="mt-5">
       <v-card-title>
-        $vuetify.breakpoint.mobile: {{ $vuetify.breakpoint.mobile }}
+        $vuetify.breakpoint.mobile:
+        {{ $vuetify.breakpoint.mobile }}
         {{ $vuetify.breakpoint.mobileBreakpoint }}
       </v-card-title>
       <v-container class="grey lighten-3">
@@ -25,10 +27,12 @@
               Click Me
             </v-btn>
           </template>
+
           <v-card>
             <v-card-title class="text-h5 grey lighten-2">
               Privacy Policy
             </v-card-title>
+
             <v-card-text>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -38,7 +42,9 @@
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </v-card-text>
+
             <v-divider />
+
             <v-card-actions>
               <v-spacer />
               <v-btn color="primary" text @click="dialog = false">
@@ -57,10 +63,12 @@
       </v-card-title>
       <v-container class="grey lighten-3">
         <v-card class="pa-3" outlined>
-          $vuetify.breakpoint.xs: {{ $vuetify.breakpoint.xs }} <br />
+          $vuetify.breakpoint.xs: {{ $vuetify.breakpoint.xs }}
+          <br />
           $vuetify.breakpoint.smAndDown: {{ $vuetify.breakpoint.smAndDown }}
           <br />
-          $vuetify.breakpoint.height: {{ $vuetify.breakpoint.height }} <br />
+          $vuetify.breakpoint.height: {{ $vuetify.breakpoint.height }}
+          <br />
           $vuetify.breakpoint.width: {{ $vuetify.breakpoint.width }}
         </v-card>
       </v-container>

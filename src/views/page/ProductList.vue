@@ -17,14 +17,6 @@ export default {
   components: {
     ProductListItem,
   },
-
-  data() {
-    return {};
-  },
-
-  mounted() {},
-
-  methods: {},
 };
 </script>
 

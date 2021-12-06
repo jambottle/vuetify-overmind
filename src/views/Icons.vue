@@ -16,14 +16,6 @@
 <script>
 export default {
   name: 'Icons',
-
-  data() {
-    return {};
-  },
-
-  mounted() {},
-
-  methods: {},
 };
 </script>
 

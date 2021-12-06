@@ -49,14 +49,6 @@
 <script>
 export default {
   name: 'Typography',
-
-  data() {
-    return {};
-  },
-
-  mounted() {},
-
-  methods: {},
 };
 </script>
 

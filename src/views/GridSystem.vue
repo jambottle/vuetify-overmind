@@ -151,14 +151,6 @@
 <script>
 export default {
   name: 'GridSystem',
-
-  data() {
-    return {};
-  },
-
-  mounted() {},
-
-  methods: {},
 };
 </script>
 
