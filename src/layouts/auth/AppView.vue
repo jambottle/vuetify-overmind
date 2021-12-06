@@ -1,14 +1,12 @@
 <template>
-  <v-fade-transition mode="out-in">
+  <v-main>
     <router-view />
-  </v-fade-transition>
+  </v-main>
 </template>
 
 <script>
-import '@/styles/overrides.scss';
-
 export default {
-  name: 'App',
+  name: 'AuthAppView',
 
   data() {
     return {};
@@ -19,3 +17,5 @@ export default {
   methods: {},
 };
 </script>
+
+<style lang="scss" scoped></style>
