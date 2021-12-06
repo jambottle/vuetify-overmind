@@ -1,28 +1,25 @@
 <template>
   <v-container>
-    <v-card>
-      <v-data-table
-        :headers="headers"
-        :items="desserts"
-        :items-per-page="5"
-        class="elevation-1"
-      />
-    </v-card>
-
-    <v-card class="mt-5" dark>
-      <v-data-table
-        :headers="headers"
-        :items="desserts"
-        :items-per-page="5"
-        class="elevation-1"
-      />
-    </v-card>
+    <DataTable
+      title="회원 목록"
+      :headers="headers"
+      :items="desserts"
+      :items-per-page="5"
+    >
+      <div slot="top">"Hello World!"</div>
+    </DataTable>
   </v-container>
 </template>
 
 <script>
+import DataTable from '@/components/app/DataTable';
+
 export default {
-  name: 'Tables',
+  name: 'AppTable',
+
+  components: {
+    DataTable,
+  },
 
   data() {
     return {

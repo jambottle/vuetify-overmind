@@ -15,8 +15,8 @@ import GridListPage from '@/views/GridListPage';
 import Breakpoints from '@/views/Breakpoints';
 import Typography from '@/views/Typography';
 
-import Tables from '@/views/Tables';
-import Forms from '@/views/Forms';
+// import Tables from '@/views/Tables';
+// import Forms from '@/views/Forms';
 import Buttons from '@/views/Buttons';
 import Icons from '@/views/Icons';
 
@@ -55,14 +55,34 @@ const routes = [
         component: Typography,
       },
       {
-        path: '/tables',
-        name: 'Tables',
-        component: Tables,
+        path: '/tables/app-table',
+        name: 'AppTable',
+        component: () =>
+          import(
+            /* webpackChunkName: "views-tables" */ '@/views/tables/AppTable'
+          ),
       },
       {
-        path: '/forms',
-        name: 'Forms',
-        component: Forms,
+        path: '/tables/basic-table',
+        name: 'BasicTable',
+        component: () =>
+          import(
+            /* webpackChunkName: "views-tables" */ '@/views/tables/BasicTable'
+          ),
+      },
+      {
+        path: '/forms/app-form',
+        name: 'AppForm',
+        component: () =>
+          import(/* webpackChunkName: "views-forms" */ '@/views/forms/AppForm'),
+      },
+      {
+        path: '/forms/form-validation',
+        name: 'FormValidation',
+        component: () =>
+          import(
+            /* webpackChunkName: "views-forms" */ '@/views/forms/FormValidation'
+          ),
       },
       {
         path: '/buttons',

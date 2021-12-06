@@ -63,8 +63,34 @@ export default {
         { title: 'Breakpoints', icon: 'mdi-image', to: '/breakpoints' },
         { title: 'Typography', icon: 'mdi-image', to: '/typography' },
 
-        { title: 'Tables', icon: 'mdi-table-settings', to: '/tables' },
-        { title: 'Forms', icon: 'mdi-form-select', to: '/forms' },
+        {
+          title: 'Tables',
+          icon: 'mdi-table-settings',
+          items: [
+            {
+              title: 'App Table',
+              to: '/tables/app-table',
+            },
+            {
+              title: 'Basic Table',
+              to: '/tables/basic-table',
+            },
+          ],
+        },
+        {
+          title: 'Forms',
+          icon: 'mdi-form-select',
+          items: [
+            {
+              title: 'App Form',
+              to: '/forms/app-form',
+            },
+            {
+              title: 'Form Validation',
+              to: '/forms/form-validation',
+            },
+          ],
+        },
         { title: 'Buttons', icon: 'mdi-gesture-tap-button', to: '/buttons' },
         { title: 'Icons', icon: 'mdi-emoticon-excited-outline', to: '/icons' },
       ],

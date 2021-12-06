@@ -94,13 +94,13 @@
 
 <script>
 export default {
-  name: 'Forms',
+  name: 'FormValidation',
 
   data() {
     return {
-      username: null,
-      phoneNumber: null,
-      usermail: null,
+      username: '',
+      phoneNumber: '',
+      usermail: '',
       select: null,
       checkbok: null,
 
@@ -122,9 +122,9 @@ export default {
       });
     },
     clear() {
-      this.username = null;
-      this.phoneNumber = null;
-      this.usermail = null;
+      this.username = '';
+      this.phoneNumber = '';
+      this.usermail = '';
       this.select = null;
       this.checkbok = null;
     },
