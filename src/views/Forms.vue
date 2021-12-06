@@ -1,52 +1,93 @@
 <template>
-  <v-container>
-    <v-card class="pa-3">
-      <v-form ref="form" v-model="valid" lazy-validation>
-        <v-text-field
-          v-model="name"
-          :counter="10"
-          :rules="nameRules"
-          label="Name"
-          required
-        />
+  <v-container fluid>
+    <v-card>
+      <v-card-title>Form Validation</v-card-title>
+      <v-card-text>
+        <ValidationObserver ref="observer" v-slot="{ invalid }">
+          <v-form @submit.prevent="submit">
+            <ValidationProvider
+              v-slot="{ errors }"
+              name="User Name"
+              rules="required|max:10"
+            >
+              <v-text-field
+                v-model="username"
+                label="User Name"
+                :counter="10"
+                :error-messages="errors"
+              />
+            </ValidationProvider>
 
-        <v-text-field
-          v-model="email"
-          :rules="emailRules"
-          label="E-mail"
-          required
-        />
+            <ValidationProvider
+              v-slot="{ errors }"
+              name="Phone Number"
+              :rules="{
+                required: true,
+                numeric: true,
+                digits: 11,
+              }"
+            >
+              <v-text-field
+                v-model="phoneNumber"
+                label="Phone Number"
+                :counter="11"
+                :error-messages="errors"
+              />
+            </ValidationProvider>
 
-        <v-select
-          v-model="select"
-          :items="items"
-          :rules="[v => !!v || 'Item is required']"
-          label="Item"
-          required
-        />
+            <ValidationProvider
+              v-slot="{ errors }"
+              name="User E-Mail"
+              :rules="{
+                required: true,
+                email: true,
+              }"
+            >
+              <v-text-field
+                v-model="usermail"
+                label="User E-Mail"
+                :error-messages="errors"
+              />
+            </ValidationProvider>
 
-        <v-checkbox
-          v-model="checkbox"
-          :rules="[v => !!v || 'You must agree to continue!']"
-          label="Do you agree?"
-          required
-        />
+            <ValidationProvider
+              v-slot="{ errors }"
+              name="Select"
+              :rules="{ required: true }"
+            >
+              <v-select
+                v-model="select"
+                label="Select"
+                :items="items"
+                :error-messages="errors"
+              />
+            </ValidationProvider>
 
-        <v-btn
-          :disabled="!valid"
-          color="success"
-          class="mr-4"
-          @click="validate"
-        >
-          Validate
-        </v-btn>
+            <ValidationProvider
+              v-slot="{ errors }"
+              name="Checkbox"
+              :rules="{ required: true }"
+            >
+              <v-checkbox
+                v-model="checkbox"
+                label="Checkbox"
+                value="1"
+                :error-messages="errors"
+              />
+            </ValidationProvider>
 
-        <v-btn color="error" class="mr-4" @click="reset">Reset Form</v-btn>
-
-        <v-btn color="warning" @click="resetValidation">
-          Reset Validation
-        </v-btn>
-      </v-form>
+            <v-btn
+              class="mr-4"
+              color="primary"
+              type="submit"
+              :disabled="invalid"
+            >
+              Submit
+            </v-btn>
+            <v-btn @click="clear">Clear</v-btn>
+          </v-form>
+        </ValidationObserver>
+      </v-card-text>
     </v-card>
   </v-container>
 </template>
@@ -55,32 +96,37 @@
 export default {
   name: 'Forms',
 
-  data: () => ({
-    valid: true,
-    name: '',
-    nameRules: [
-      v => !!v || 'Name is required',
-      v => (v && v.length <= 10) || 'Name must be less than 10 characters',
-    ],
-    email: '',
-    emailRules: [
-      v => !!v || 'E-mail is required',
-      v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
-    ],
-    select: null,
-    items: ['Item 1', 'Item 2', 'Item 3', 'Item 4'],
-    checkbox: false,
-  }),
+  data() {
+    return {
+      username: null,
+      phoneNumber: null,
+      usermail: null,
+      select: null,
+      checkbok: null,
+
+      items: [
+        { text: 'item1', value: 1 },
+        { text: 'item2', value: 2 },
+        { text: 'item3', value: 3 },
+      ],
+    };
+  },
 
   methods: {
-    validate() {
-      this.$refs.form.validate();
+    submit() {
+      this.$refs.observer.validate().then(result => {
+        console.log('result: ', result);
+        if (result) {
+          alert('양식 제출');
+        }
+      });
     },
-    reset() {
-      this.$refs.form.reset();
-    },
-    resetValidation() {
-      this.$refs.form.resetValidation();
+    clear() {
+      this.username = null;
+      this.phoneNumber = null;
+      this.usermail = null;
+      this.select = null;
+      this.checkbok = null;
     },
   },
 };
