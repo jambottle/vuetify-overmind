@@ -1,7 +1,7 @@
 <template>
   <v-app>
-    <AppBar @drawer="drawer = !drawer" />
-    <AppDrawer v-model="drawer" />
+    <AppBar />
+    <AppDrawer />
     <AppView />
   </v-app>
 </template>
@@ -18,12 +18,6 @@ export default {
     AppBar,
     AppDrawer,
     AppView,
-  },
-
-  data() {
-    return {
-      drawer: false,
-    };
   },
 };
 </script>
