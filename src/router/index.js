@@ -1,26 +1,18 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-import AppLayout from '@/layouts/default/Index';
+import AppLayout from '@/layouts/app/Index';
+import Dashboard from '@/views/app/Dashboard';
+import GridSystem from '@/views/app/GridSystem';
+import GridListPage from '@/views/app/GridListPage';
+import Breakpoints from '@/views/app/Breakpoints';
+import Typography from '@/views/app/Typography';
+import Buttons from '@/views/app/Buttons';
+import Icons from '@/views/app/Icons';
+
 import AuthLayout from '@/layouts/auth/Index';
 import PageLayout from '@/layouts/page/Index';
-
-import Dashboard from '@/views/Dashboard';
-// import SignIn from '@/views/auth/SignIn';
-// import SignUp from '@/views/auth/SignUp';
 import ProductList from '@/views/page/ProductList';
-
-import GridSystem from '@/views/GridSystem';
-import GridListPage from '@/views/GridListPage';
-import Breakpoints from '@/views/Breakpoints';
-import Typography from '@/views/Typography';
-
-// import Tables from '@/views/Tables';
-// import Forms from '@/views/Forms';
-import Buttons from '@/views/Buttons';
-import Icons from '@/views/Icons';
-
-// import Test from '@/views/Test';
 
 Vue.use(VueRouter);
 
@@ -59,7 +51,7 @@ const routes = [
         name: 'AppTable',
         component: () =>
           import(
-            /* webpackChunkName: "views-tables" */ '@/views/tables/AppTable'
+            /* webpackChunkName: "views-tables" */ '@/views/app/tables/AppTable'
           ),
       },
       {
@@ -67,21 +59,23 @@ const routes = [
         name: 'BasicTable',
         component: () =>
           import(
-            /* webpackChunkName: "views-tables" */ '@/views/tables/BasicTable'
+            /* webpackChunkName: "views-tables" */ '@/views/app/tables/BasicTable'
           ),
       },
       {
         path: '/forms/app-form',
         name: 'AppForm',
         component: () =>
-          import(/* webpackChunkName: "views-forms" */ '@/views/forms/AppForm'),
+          import(
+            /* webpackChunkName: "views-forms" */ '@/views/app/forms/AppForm'
+          ),
       },
       {
         path: '/forms/form-validation',
         name: 'FormValidation',
         component: () =>
           import(
-            /* webpackChunkName: "views-forms" */ '@/views/forms/FormValidation'
+            /* webpackChunkName: "views-forms" */ '@/views/app/forms/FormValidation'
           ),
       },
       {
@@ -97,7 +91,7 @@ const routes = [
       {
         path: '/test',
         name: 'Test',
-        component: () => import('@/views/Test'),
+        component: () => import('@/views/app/Test'),
       },
     ],
   },
