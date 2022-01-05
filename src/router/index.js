@@ -6,8 +6,8 @@ import AuthLayout from '@/layouts/auth/Index';
 import PageLayout from '@/layouts/page/Index';
 
 import Dashboard from '@/views/Dashboard';
-// import SignUp from '@/views/auth/SignUp';
 // import SignIn from '@/views/auth/SignIn';
+// import SignUp from '@/views/auth/SignUp';
 import ProductList from '@/views/page/ProductList';
 
 import GridSystem from '@/views/GridSystem';

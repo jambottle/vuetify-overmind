@@ -24,7 +24,7 @@
 
 <script>
 export default {
-  name: 'ProductListItem',
+  name: 'ItemList',
 };
 </script>
 

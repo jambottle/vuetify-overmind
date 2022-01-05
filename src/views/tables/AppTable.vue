@@ -5,9 +5,7 @@
       :headers="headers"
       :items="desserts"
       :items-per-page="5"
-    >
-      <div slot="top">"Hello World!"</div>
-    </DataTable>
+    />
   </v-container>
 </template>
 
