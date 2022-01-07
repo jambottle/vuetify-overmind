@@ -82,6 +82,22 @@ const state = {
         },
       ],
     },
+    {
+      title: '알림센터',
+      icon: 'mdi-checkbox-blank-badge-outline',
+      items: [
+        {
+          title: '이벤트 관리 콘솔',
+          icon: 'mdi-calendar-alert',
+          to: '/events',
+        },
+        {
+          title: '알림 발송 목록',
+          icon: 'mdi-bell-ring',
+          to: '/notifications',
+        },
+      ],
+    },
   ],
 };
 
