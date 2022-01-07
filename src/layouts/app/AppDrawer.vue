@@ -1,9 +1,9 @@
 <template>
   <v-navigation-drawer
+    v-model="drawer"
     app
     v-bind="$attrs"
     :src="require('@/assets/sidebar.jpg')"
-    v-model="drawer"
     dark
   >
     <template v-slot:img="props">
@@ -19,12 +19,12 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
-import AppDrawerHeader from './AppDrawerHeader.vue';
-import AppDrawerList from './AppDrawerList.vue';
+import { mapState } from "vuex";
+import AppDrawerHeader from "./AppDrawerHeader.vue";
+import AppDrawerList from "./AppDrawerList.vue";
 
 export default {
-  name: 'AppDrawer',
+  name: "AppDrawer",
 
   components: {
     AppDrawerHeader,
@@ -32,13 +32,13 @@ export default {
   },
 
   computed: {
-    ...mapState('app', ['gradient', 'items']),
+    ...mapState("app", ["gradient", "items"]),
     drawer: {
       get() {
-        return this.$store.getters['app/getDrawer'];
+        return this.$store.getters["app/getDrawer"];
       },
       set(value) {
-        return this.$store.dispatch('app/toggleDrawer', value);
+        return this.$store.dispatch("app/toggleDrawer", value);
       },
     },
   },

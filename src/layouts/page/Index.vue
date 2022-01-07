@@ -6,11 +6,11 @@
 </template>
 
 <script>
-import PageBar from './PageBar.vue';
-import PageView from './PageView.vue';
+import PageBar from "./PageBar.vue";
+import PageView from "./PageView.vue";
 
 export default {
-  name: 'PageLayout',
+  name: "PageLayout",
 
   components: {
     PageBar,

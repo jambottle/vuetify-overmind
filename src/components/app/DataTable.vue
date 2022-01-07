@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'DataTable',
+  name: "DataTable",
 
   inheritAttrs: false,
 

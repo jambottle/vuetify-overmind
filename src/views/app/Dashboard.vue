@@ -13,9 +13,7 @@
               mdi-heart-pulse
             </v-icon>
             <v-row align="start">
-              <div class="text-caption grey--text text-uppercase">
-                Heart rate
-              </div>
+              <div class="text-caption grey--text text-uppercase">Heart rate</div>
               <div>
                 <span class="text-h3 font-weight-black" v-text="avg || '—'" />
                 <strong v-if="avg">BPM</strong>
@@ -76,10 +74,10 @@
 </template>
 
 <script>
-const exhale = ms => new Promise(resolve => setTimeout(resolve, ms));
+const exhale = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export default {
-  name: 'Dashboard',
+  name: "Dashboard",
 
   data: () => ({
     checking: false,

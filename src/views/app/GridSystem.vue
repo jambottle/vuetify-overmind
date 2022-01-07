@@ -150,7 +150,7 @@
 
 <script>
 export default {
-  name: 'GridSystem',
+  name: "GridSystem",
 };
 </script>
 

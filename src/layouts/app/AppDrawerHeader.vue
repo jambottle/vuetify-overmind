@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'AppDrawerHeader',
+  name: "AppDrawerHeader",
 };
 </script>
 

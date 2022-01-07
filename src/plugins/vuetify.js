@@ -1,16 +1,16 @@
-import Vue from 'vue';
-import Vuetify from 'vuetify/lib/framework';
-// import colors from 'vuetify/lib/util/colors';
+import Vue from "vue";
+import Vuetify from "vuetify/lib/framework";
+// import colors from "vuetify/lib/util/colors";
 
 Vue.use(Vuetify);
 
 const theme = {
-  primary: '#e29765',
+  primary: "#e29765",
 };
 
 export default new Vuetify({
   breakpoint: {
-    mobileBreakpoint: 'xs',
+    mobileBreakpoint: "xs",
   },
   theme: {
     themes: {

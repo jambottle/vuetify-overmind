@@ -1,1 +1,1 @@
-import './vee-validate';
+import "./vee-validate";

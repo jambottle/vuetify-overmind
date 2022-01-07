@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'AuthView',
+  name: "AuthView",
 };
 </script>
 

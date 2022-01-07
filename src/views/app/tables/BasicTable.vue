@@ -12,7 +12,10 @@
       </v-card-text>
     </v-card>
 
-    <v-card class="mt-5" dark>
+    <v-card
+      class="mt-5"
+      dark
+    >
       <v-card-title>Tables Dark</v-card-title>
       <v-card-text class="pa-0">
         <v-data-table

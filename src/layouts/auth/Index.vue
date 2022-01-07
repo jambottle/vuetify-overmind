@@ -5,10 +5,10 @@
 </template>
 
 <script>
-import AuthView from './AuthView.vue';
+import AuthView from "./AuthView.vue";
 
 export default {
-  name: 'AuthLayout',
+  name: "AuthLayout",
 
   components: {
     AuthView,

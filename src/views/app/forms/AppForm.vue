@@ -28,10 +28,10 @@
 </template>
 
 <script>
-import TextField from '@/components/app/TextField';
+import TextField from "@/components/app/TextField";
 
 export default {
-  name: 'AppForm',
+  name: "AppForm",
 
   components: {
     TextField,

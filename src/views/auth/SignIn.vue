@@ -22,11 +22,7 @@
                   />
                 </ValidationProvider>
 
-                <ValidationProvider
-                  v-slot="{ errors }"
-                  name="Password"
-                  :rules="{ required: true }"
-                >
+                <ValidationProvider v-slot="{ errors }" name="Password" :rules="{ required: true }">
                   <v-text-field
                     v-model="password"
                     label="Password"
@@ -49,9 +45,7 @@
                 </v-btn>
 
                 <div class="mt-5">
-                  <router-link class="text-decoration-none" to="/">
-                    Home
-                  </router-link>
+                  <router-link class="text-decoration-none" to="/">Home</router-link>
                   |
                   <router-link class="text-decoration-none" to="/auth/signup">
                     회원가입
@@ -68,7 +62,7 @@
 
 <script>
 export default {
-  name: 'SignIn',
+  name: "SignIn",
 
   data() {
     return {
@@ -81,7 +75,7 @@ export default {
     async signIn() {
       const result = await this.$refs.observer.validate();
       if (result) {
-        alert('로그인 성공');
+        alert("로그인 성공");
       }
     },
   },

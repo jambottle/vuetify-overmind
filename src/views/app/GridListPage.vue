@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'GridListPage',
+  name: "GridListPage",
 };
 </script>
 

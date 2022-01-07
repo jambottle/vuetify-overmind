@@ -7,12 +7,12 @@
 </template>
 
 <script>
-import AppBar from './AppBar.vue';
-import AppDrawer from './AppDrawer.vue';
-import AppView from './AppView.vue';
+import AppBar from "./AppBar.vue";
+import AppDrawer from "./AppDrawer.vue";
+import AppView from "./AppView.vue";
 
 export default {
-  name: 'AppLayout',
+  name: "AppLayout",
 
   components: {
     AppBar,

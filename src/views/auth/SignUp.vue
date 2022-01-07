@@ -3,11 +3,7 @@
     <v-row justify="center">
       <v-col cols="auto">
         <router-link to="/">
-          <v-img
-            class="mx-auto mb-4"
-            width="100"
-            :src="require('@/assets/logo.png')"
-          />
+          <v-img class="mx-auto mb-4" width="100" :src="require('@/assets/logo.png')" />
         </router-link>
 
         <v-card width="460">
@@ -30,11 +26,7 @@
                   />
                 </ValidationProvider>
 
-                <ValidationProvider
-                  v-slot="{ errors }"
-                  name="Password"
-                  :rules="{ required: true }"
-                >
+                <ValidationProvider v-slot="{ errors }" name="Password" :rules="{ required: true }">
                   <v-text-field
                     v-model="password_1st"
                     label="Password"
@@ -83,7 +75,7 @@
 
 <script>
 export default {
-  name: 'SignUp',
+  name: "SignUp",
 
   data() {
     return {
@@ -97,7 +89,7 @@ export default {
     async signUp() {
       const result = await this.$refs.observer.validate();
       if (result) {
-        alert('회원가입 성공');
+        alert("회원가입 성공");
       }
     },
   },

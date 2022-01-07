@@ -3,10 +3,10 @@
 </template>
 
 <script>
-console.log('Test Component for Lazy Loading...');
+console.log("Test Component for Lazy Loading...");
 
 export default {
-  name: 'Test',
+  name: "Test",
 };
 </script>
 

@@ -5,11 +5,7 @@
       <v-card-text>
         <ValidationObserver ref="observer" v-slot="{ invalid }">
           <v-form @submit.prevent="submit">
-            <ValidationProvider
-              v-slot="{ errors }"
-              name="User Name"
-              rules="required|max:10"
-            >
+            <ValidationProvider v-slot="{ errors }" name="User Name" rules="required|max:10">
               <v-text-field
                 v-model="username"
                 label="User Name"
@@ -43,47 +39,18 @@
                 email: true,
               }"
             >
-              <v-text-field
-                v-model="usermail"
-                label="User E-Mail"
-                :error-messages="errors"
-              />
+              <v-text-field v-model="usermail" label="User E-Mail" :error-messages="errors" />
             </ValidationProvider>
 
-            <ValidationProvider
-              v-slot="{ errors }"
-              name="Select"
-              :rules="{ required: true }"
-            >
-              <v-select
-                v-model="select"
-                label="Select"
-                :items="items"
-                :error-messages="errors"
-              />
+            <ValidationProvider v-slot="{ errors }" name="Select" :rules="{ required: true }">
+              <v-select v-model="select" label="Select" :items="items" :error-messages="errors" />
             </ValidationProvider>
 
-            <ValidationProvider
-              v-slot="{ errors }"
-              name="Checkbox"
-              :rules="{ required: true }"
-            >
-              <v-checkbox
-                v-model="checkbox"
-                label="Checkbox"
-                value="1"
-                :error-messages="errors"
-              />
+            <ValidationProvider v-slot="{ errors }" name="Checkbox" :rules="{ required: true }">
+              <v-checkbox v-model="checkbox" label="Checkbox" value="1" :error-messages="errors" />
             </ValidationProvider>
 
-            <v-btn
-              class="mr-4"
-              color="primary"
-              type="submit"
-              :disabled="invalid"
-            >
-              Submit
-            </v-btn>
+            <v-btn class="mr-4" color="primary" type="submit" :disabled="invalid">Submit</v-btn>
             <v-btn @click="clear">Clear</v-btn>
           </v-form>
         </ValidationObserver>
@@ -94,37 +61,37 @@
 
 <script>
 export default {
-  name: 'FormValidation',
+  name: "FormValidation",
 
   data() {
     return {
-      username: '',
-      phoneNumber: '',
-      usermail: '',
+      username: "",
+      phoneNumber: "",
+      usermail: "",
       select: null,
       checkbok: null,
 
       items: [
-        { text: 'item1', value: 1 },
-        { text: 'item2', value: 2 },
-        { text: 'item3', value: 3 },
+        { text: "item1", value: 1 },
+        { text: "item2", value: 2 },
+        { text: "item3", value: 3 },
       ],
     };
   },
 
   methods: {
     submit() {
-      this.$refs.observer.validate().then(result => {
-        console.log('result: ', result);
+      this.$refs.observer.validate().then((result) => {
+        console.log("result: ", result);
         if (result) {
-          alert('양식 제출');
+          alert("양식 제출");
         }
       });
     },
     clear() {
-      this.username = '';
-      this.phoneNumber = '';
-      this.usermail = '';
+      this.username = "";
+      this.phoneNumber = "";
+      this.usermail = "";
       this.select = null;
       this.checkbok = null;
     },
