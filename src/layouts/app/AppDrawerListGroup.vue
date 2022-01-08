@@ -2,9 +2,7 @@
   <v-list-group :prepend-icon="item.icon">
     <template v-slot:activator>
       <v-list-item-content>
-        <v-list-item-title>
-          {{ item.title }}
-        </v-list-item-title>
+        <v-list-item-title>{{ item.title }}</v-list-item-title>
       </v-list-item-content>
     </template>
 

@@ -1,11 +1,12 @@
 import Vue from "vue";
 import Vuetify from "vuetify/lib/framework";
-// import colors from "vuetify/lib/util/colors";
+import colors from "vuetify/lib/util/colors";
 
 Vue.use(Vuetify);
 
 const theme = {
-  primary: "#e29765",
+  primary: colors.deepOrange.lighten2,
+  secondary: colors.deepPurple.darken1,
 };
 
 export default new Vuetify({

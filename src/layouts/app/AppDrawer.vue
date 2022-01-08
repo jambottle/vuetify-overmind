@@ -11,9 +11,7 @@
     </template>
 
     <AppDrawerHeader />
-
     <v-divider />
-
     <AppDrawerList :items="items" />
   </v-navigation-drawer>
 </template>
@@ -37,8 +35,8 @@ export default {
       get() {
         return this.$store.getters["app/getDrawer"];
       },
-      set(value) {
-        return this.$store.dispatch("app/toggleDrawer", value);
+      set(payload) {
+        return this.$store.dispatch("app/toggleDrawer", payload);
       },
     },
   },

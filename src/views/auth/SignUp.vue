@@ -18,7 +18,7 @@
                   :rules="{ required: true }"
                 >
                   <v-text-field
-                    v-model="usermail"
+                    v-model="userMail"
                     label="User E-Mail"
                     clearable
                     prepend-icon="mdi-email"
@@ -28,7 +28,7 @@
 
                 <ValidationProvider v-slot="{ errors }" name="Password" :rules="{ required: true }">
                   <v-text-field
-                    v-model="password_1st"
+                    v-model="password"
                     label="Password"
                     clearable
                     prepend-icon="mdi-lock-outline"
@@ -45,7 +45,7 @@
                   }"
                 >
                   <v-text-field
-                    v-model="password_2nd"
+                    v-model="passwordConfirmed"
                     label="Confirm Password"
                     clearable
                     prepend-icon="mdi-lock-outline"
@@ -79,9 +79,9 @@ export default {
 
   data() {
     return {
-      usermail: null,
-      password_1st: null,
-      password_2nd: null,
+      userMail: null,
+      password: null,
+      passwordConfirmed: null,
     };
   },
 

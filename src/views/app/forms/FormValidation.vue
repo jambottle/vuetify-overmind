@@ -7,11 +7,22 @@
           <v-form @submit.prevent="submit">
             <ValidationProvider v-slot="{ errors }" name="User Name" rules="required|max:10">
               <v-text-field
-                v-model="username"
+                v-model="userName"
                 label="User Name"
                 :counter="10"
                 :error-messages="errors"
               />
+            </ValidationProvider>
+
+            <ValidationProvider
+              v-slot="{ errors }"
+              name="User E-Mail"
+              :rules="{
+                required: true,
+                email: true,
+              }"
+            >
+              <v-text-field v-model="userMail" label="User E-Mail" :error-messages="errors" />
             </ValidationProvider>
 
             <ValidationProvider
@@ -31,19 +42,13 @@
               />
             </ValidationProvider>
 
-            <ValidationProvider
-              v-slot="{ errors }"
-              name="User E-Mail"
-              :rules="{
-                required: true,
-                email: true,
-              }"
-            >
-              <v-text-field v-model="usermail" label="User E-Mail" :error-messages="errors" />
-            </ValidationProvider>
-
-            <ValidationProvider v-slot="{ errors }" name="Select" :rules="{ required: true }">
-              <v-select v-model="select" label="Select" :items="items" :error-messages="errors" />
+            <ValidationProvider v-slot="{ errors }" name="Select Item" :rules="{ required: true }">
+              <v-select
+                v-model="selectItem"
+                label="Select Item"
+                :items="selectItems"
+                :error-messages="errors"
+              />
             </ValidationProvider>
 
             <ValidationProvider v-slot="{ errors }" name="Checkbox" :rules="{ required: true }">
@@ -65,17 +70,16 @@ export default {
 
   data() {
     return {
-      username: "",
+      userName: "",
+      userMail: "",
       phoneNumber: "",
-      usermail: "",
-      select: null,
-      checkbok: null,
-
-      items: [
+      selectItems: [
         { text: "item1", value: 1 },
         { text: "item2", value: 2 },
         { text: "item3", value: 3 },
       ],
+      selectItem: null,
+      checkbox: null,
     };
   },
 
@@ -89,11 +93,11 @@ export default {
       });
     },
     clear() {
-      this.username = "";
+      this.userName = "";
+      this.userMail = "";
       this.phoneNumber = "";
-      this.usermail = "";
-      this.select = null;
-      this.checkbok = null;
+      this.selectItem = null;
+      this.checkbox = null;
     },
   },
 };

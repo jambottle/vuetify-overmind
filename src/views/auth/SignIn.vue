@@ -14,7 +14,7 @@
                   :rules="{ required: true }"
                 >
                   <v-text-field
-                    v-model="usermail"
+                    v-model="userMail"
                     label="User E-Mail"
                     clearable
                     prepend-icon="mdi-email"
@@ -66,7 +66,7 @@ export default {
 
   data() {
     return {
-      usermail: null,
+      userMail: null,
       password: null,
     };
   },

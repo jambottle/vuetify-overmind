@@ -11,8 +11,8 @@ import { extend, ValidationObserver, ValidationProvider } from "vee-validate";
 //   return true;
 // });
 
-/* (2) max 규칙 등을 불러와 활용/응용하는 방법 */
-import { max, required, numeric, digits, email, confirmed } from "vee-validate/dist/rules";
+/* (2) 미리 만들어둔 규칙들을 불러와 활용/응용하는 방법 */
+import { max, required, email, numeric, digits, confirmed } from "vee-validate/dist/rules";
 
 extend("max", {
   ...max,
@@ -20,7 +20,11 @@ extend("max", {
 });
 extend("required", {
   ...required,
-  message: "{_field_} 필드는 필수적으로 입력해야 합니다.",
+  message: "{_field_} 필드는 반드시 입력해야 합니다.",
+});
+extend("email", {
+  ...email,
+  message: "잘못 입력된 이메일 주소입니다.",
 });
 extend("numeric", {
   ...numeric,
@@ -29,10 +33,6 @@ extend("numeric", {
 extend("digits", {
   ...digits,
   message: "{_field_} 필드는 {length}자리여야 합니다.",
-});
-extend("email", {
-  ...email,
-  message: "잘못 입력된 이메일 주소입니다.",
 });
 extend("confirmed", {
   ...confirmed,

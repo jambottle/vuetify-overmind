@@ -112,8 +112,8 @@ const mutations = {
 };
 
 const actions = {
-  toggleDrawer({ commit }, value) {
-    commit("setDrawer", value);
+  toggleDrawer({ commit }, payload) {
+    commit("setDrawer", payload);
   },
 };
 

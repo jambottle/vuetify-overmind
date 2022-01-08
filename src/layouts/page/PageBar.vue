@@ -1,6 +1,6 @@
 <template>
   <v-app-bar app color="primary" dark>
-    <v-toolbar-title>Page Layout</v-toolbar-title>
+    <v-toolbar-title>Product List</v-toolbar-title>
   </v-app-bar>
 </template>
 

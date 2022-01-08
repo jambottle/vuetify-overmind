@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "AppTextField",
+  name: "TextField",
 
   inheritAttrs: false,
 
@@ -35,11 +35,6 @@ export default {
       default: true,
     },
   },
-
-  // created() {
-  //   console.log("this.$attrs: ", this.$attrs);
-  //   console.log("this.$listeners: ", this.$listeners);
-  // },
 };
 </script>
 
